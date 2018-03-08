@@ -277,11 +277,14 @@ desired effect
     <section class="content container-fluid">
 
       <!--------------------------
-
-
         | Your Page Content Here |
         -------------------------->
-
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+       <%= yield %>
+      <!--------------------------
+        | Your Page Content Here |
+        -------------------------->  
     </section>
     <!-- /.content -->
   </div>

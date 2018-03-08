@@ -10,6 +10,8 @@ gem 'font-awesome-sass'
 gem "font-awesome-rails"
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-ui-rails'
+gem 'devise'
+
 
 source 'https://rails-assets.org/' do 
   gem 'rails-assets-adminlte'
