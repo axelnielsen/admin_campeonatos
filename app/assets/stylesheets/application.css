@@ -15,4 +15,10 @@
  *= require adminlte
  *= require skin-blue
  *= require font-awesome
+ *= require datatables
+ *
+ * For bootstrap support
+ * require datatables/dataTables.bootstrap
+ * 
  */
+ 
