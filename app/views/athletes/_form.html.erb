@@ -1,0 +1,98 @@
+
+<div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title">Nuevo Atleta</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form class="form-horizontal">
+              <div class="box-body">
+
+            <%= simple_form_for @athlete do |f| %>
+            <% if athlete.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(athlete.errors.count, "error") %> Error al guardar:</h2>
+
+                  <ul>
+                  <% athlete.errors.full_messages.each do |message| %>
+                    <liathlete message %></li>
+                  <% end %>
+                  </ul>
+                </div>
+              <% end %>
+             <div class="form-group">
+             <label for="text" class="col-sm-1 control-label"></label>
+             <div class="col-sm-10">
+              <%= f.input :names , placeholder:'Nombres', required: true, error:'El campo nombres es obligatorio', label: false %>
+             </div>
+             </div>
+             <div class="form-group">
+             <label for="text" class="col-sm-1 control-label"></label>
+             <div class="col-sm-10">
+              <%= f.input :surnames , placeholder:'apellidos', required: true, error:'El campo apellidos es obligatorio', label: false %>
+             </div>
+             </div>
+             <div class="form-group">
+             <label for="text" class="col-sm-1 control-label"></label>
+             <div class="col-sm-10">
+              <%= f.input :sex , placeholder:'Sexo', required: true, error:'El campo Sexo es obligatorio', label: false %>
+             </div>
+             </div>
+             <div class="form-group">
+             <label for="text" class="col-sm-1 control-label"></label>
+             <div class="col-sm-10">
+              <%= f.input :birthdate , placeholder:'Fecha de nacimiento', required: true, error:'El campo fecha de nacimiento es obligatorio', label: false %>
+             </div>
+             </div>
+             <div class="form-group">
+             <label for="text" class="col-sm-1 control-label"></label>
+             <div class="col-sm-10">
+              <%= f.input :rut , placeholder:'Rut', required: true, error:'El campo RUT es obligatorio', label: false %>
+             </div>
+             </div>
+             <div class="form-group">
+             <label for="text" class="col-sm-1 control-label"></label>
+             <div class="col-sm-10">
+              <%= f.input :idClub , placeholder:'Club', required: true, error:'El campo nombre de Club es obligatorio', label: false %>
+             </div>
+             </div>
+             <div class="form-group">
+             <label for="text" class="col-sm-1 control-label"></label>
+             <div class="col-sm-10">
+              <%= f.input :cellPhone , placeholder:'Fono', required: true, error:'El campo fono es obligatorio', label: false %>
+             </div>
+             </div> 
+             <div class="form-group">
+             <label for="text" class="col-sm-1 control-label"></label>
+             <div class="col-sm-10">
+              <%= f.input :mail , placeholder:'Email', required: false, error:'El campo Email es obligatorio', label: false %>
+             </div>
+             </div>
+             <div class="form-group">
+             <label for="text" class="col-sm-1 control-label"></label>
+             <div class="col-sm-10">
+              <%= f.input :idCoach , placeholder:'Entrenador', required: false, error:'El campo entrenador es obligatorio', label: false %>
+             </div>
+             </div> 
+             <div class="form-group">
+             <label for="text" class="col-sm-1 control-label"></label>
+             <div class="col-sm-10">
+              <%= f.input :size , placeholder:'Talla', required: false, error:'El campo Talla es obligatorio', label: false %>
+             </div>
+             </div> 
+             <div class="form-group">
+             <label for="text" class="col-sm-1 control-label"></label>
+             <div class="col-sm-10">
+              <%= f.input :height , placeholder:'Estatura', required: false, error:'El campo estatura es obligatorio', label: false %>
+             </div>
+             </div> 
+             <!-- /.box-body -->
+              <div class="box-footer">
+                    <%= link_to "Cancelar", athletes_path , class: "btn btn-warning"%>              
+                    <%= f.button :submit, class: "btn btn-info pull-right"%>
+            <% end %>
+                           </div>
+              <!-- /.box-footer -->
+            </form>
+          </div>
+

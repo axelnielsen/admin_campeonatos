@@ -1,0 +1,60 @@
+<div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title">Nuevo Campeonato</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form class="form-horizontal">
+              <div class="box-body">
+
+            <%= simple_form_for @championship do |f| %>
+            <% if championship.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(championship.errors.count, "error") %> Error al guardar:</h2>
+
+                  <ul>
+                  <% championship.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                  </ul>
+                </div>
+              <% end %>
+             <div class="form-group">
+             <label for="text" class="col-sm-1 control-label"></label>
+             <div class="col-sm-10">
+              <%= f.input :name , placeholder:'Nombre del campeonato', required: true, error:'El campo nombre es obligatorio', label: false %>
+             </div>
+             </div>
+              <div class="form-group">
+             <label for="text" class="col-sm-1 control-label"></label>
+             <div class="col-sm-10">
+              <%= f.input :initdate , placeholder:'Fecha de inicio', required: true, error:'El campo fecha de inicio es obligatorio', label: false %>
+             </div>
+             </div>
+              <div class="form-group">
+             <label for="text" class="col-sm-1 control-label"></label>
+             <div class="col-sm-10">
+              <%= f.input :findate , placeholder:'Fecha de término', required: true, error:'El campo fecha de término es obligatorio', label: false %>
+             </div>
+             </div>
+              <div class="form-group">
+             <label for="text" class="col-sm-1 control-label"></label>
+             <div class="col-sm-10">
+              <%= f.input :address , placeholder:'Dirección', required: true, error:'El campo dirección es obligatorio', label: false %>
+             </div>
+             </div>
+               <div class="form-group">
+             <label for="text" class="col-sm-1 control-label"></label>
+             <div class="col-sm-10">
+              <%= f.input :idRegion , placeholder:'Región', required: true, error:'El campo nombre de región es obligatorio', label: false %>
+             </div>
+             </div>
+             <!-- /.box-body -->
+              <div class="box-footer">
+                    <%= link_to "Cancelar", championships_path , class: "btn btn-warning"%>              
+                    <%= f.button :submit, class: "btn btn-info pull-right"%>
+            <% end %>
+                           </div>
+              <!-- /.box-footer -->
+            </form>
+          </div>

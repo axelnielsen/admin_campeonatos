@@ -1,0 +1,27 @@
+<%= form_with(model: discipline_championship, local: true) do |form| %>
+  <% if discipline_championship.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(discipline_championship.errors.count, "error") %> prohibited this discipline_championship from being saved:</h2>
+
+      <ul>
+      <% discipline_championship.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :idChampionship %>
+    <%= form.text_field :idChampionship, id: :discipline_championship_idChampionship %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idDiscipline %>
+    <%= form.text_field :idDiscipline, id: :discipline_championship_idDiscipline %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

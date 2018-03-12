@@ -1,0 +1,57 @@
+<%= form_with(model: referee, local: true) do |form| %>
+  <% if referee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(referee.errors.count, "error") %> prohibited this referee from being saved:</h2>
+
+      <ul>
+      <% referee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :names %>
+    <%= form.text_field :names, id: :referee_names %>
+  </div>
+
+  <div class="field">
+    <%= form.label :surnames %>
+    <%= form.text_field :surnames, id: :referee_surnames %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sex %>
+    <%= form.text_field :sex, id: :referee_sex %>
+  </div>
+
+  <div class="field">
+    <%= form.label :birthdate %>
+    <%= form.date_select :birthdate, id: :referee_birthdate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rut %>
+    <%= form.text_field :rut, id: :referee_rut %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cellPhone %>
+    <%= form.text_field :cellPhone, id: :referee_cellPhone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mail %>
+    <%= form.text_field :mail, id: :referee_mail %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idLevel %>
+    <%= form.text_field :idLevel, id: :referee_idLevel %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

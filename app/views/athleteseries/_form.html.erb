@@ -1,0 +1,32 @@
+<%= form_with(model: athleteseries, local: true) do |form| %>
+  <% if athleteseries.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(athleteseries.errors.count, "error") %> prohibited this athleteseries from being saved:</h2>
+
+      <ul>
+      <% athleteseries.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :idSerie %>
+    <%= form.text_field :idSerie, id: :athleteseries_idSerie %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idAthlete %>
+    <%= form.text_field :idAthlete, id: :athleteseries_idAthlete %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idStatus %>
+    <%= form.text_field :idStatus, id: :athleteseries_idStatus %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

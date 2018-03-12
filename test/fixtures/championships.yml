@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  initdate: 2018-03-10 16:56:35
+  findate: 2018-03-10 16:56:35
+  idRegion: 
+  address: MyString
+
+two:
+  name: MyString
+  initdate: 2018-03-10 16:56:35
+  findate: 2018-03-10 16:56:35
+  idRegion: 
+  address: MyString

@@ -99,6 +99,18 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (6.0.1)
       railties (>= 3.2.16)
+    kaminari (1.1.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.1.1)
+      kaminari-activerecord (= 1.1.1)
+      kaminari-core (= 1.1.1)
+    kaminari-actionview (1.1.1)
+      actionview
+      kaminari-core (= 1.1.1)
+    kaminari-activerecord (1.1.1)
+      activerecord
+      kaminari-core (= 1.1.1)
+    kaminari-core (1.1.1)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -136,6 +148,9 @@ GEM
       railties (= 5.1.5)
       sprockets-rails (>= 2.0.0)
     rails-assets-adminlte (2.3.11)
+    rails-assets-datatables (1.10.16)
+      rails-assets-jquery (>= 1.7.0)
+    rails-assets-jquery (3.3.1)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -170,6 +185,9 @@ GEM
     selenium-webdriver (3.10.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
+    simple_form (3.5.1)
+      actionpack (> 4, < 5.2)
+      activemodel (> 4, < 5.2)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -221,12 +239,16 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   jquery-ui-rails
+  kaminari
   listen (>= 3.0.5, < 3.2)
   puma (~> 3.7)
   rails (~> 5.1.4)
   rails-assets-adminlte!
+  rails-assets-datatables!
+  rails-assets-jquery!
   sass-rails (~> 5.0)
   selenium-webdriver
+  simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
