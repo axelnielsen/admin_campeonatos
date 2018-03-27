@@ -16,9 +16,16 @@
  *= require skin-blue
  *= require font-awesome
  *= require datatables
- *
- * For bootstrap support
- * require datatables/dataTables.bootstrap
+ *=require datatables/dataTables.bootstrap
  * 
  */
- 
+ /* Layout */
+.wrapper {
+  /*min-height: 100%;
+  position: relative;
+  overflow: hidden;*/
+  width: 100%;
+  min-height: 100%;
+  height: auto !important;
+  position: absolute;
+}

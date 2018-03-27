@@ -8,7 +8,7 @@ gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'font-awesome-sass'
 gem "font-awesome-rails"
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap'
 gem 'jquery-ui-rails'
 gem 'devise'
 gem 'simple_form'
